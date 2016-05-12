@@ -1,52 +1,68 @@
-﻿# sobolev 空间
 
-标签（空格分隔）：  整理笔记及问题 
 
 ---
 
-##sobolev空间
+##sobolev space
 ### 1.1预备知识: 
  
 
- 1. **设立讨论的环境:利普希茨区域,多重导数和一些基本的函数空间** .
- (1)利普希茨区域的定义:如果 $\Omega$ 的边界能被利普希茨连续函数局部代替,则称 $\Omega$ 为一个利普希茨区域.即对任意的 $x\in\partial\Omega$ ,存在$x$的一个邻域,使得 $G\cap\partial\Omega$ 在一个适当的坐标系下是一个利普希茨连续函数.
+ 1. **设立讨论的环境:利普希茨区域,多重导数和一些基本的函数空间** 
+ 
+ (1)利普希茨区域的定义:如果 $$\Omega$$ 的边界能被利普希茨连续函数局部代替,则称 $$\Omega$$ 为一个利普希茨区域.即对任意的 $$x\in\partial\Omega$$ ,存在 $$x$$ 的一个邻域,使得 $$G\cap\partial\Omega$$ 在一个适当的坐标系下是一个利普希茨连续函数.
+
 (2)利普希茨函数:满足利普希茨条件的函数.
+
 (3)利普希茨条件:
  
 $$
 |f(x_2)-f(x_1)|\leq L|x_2-x_1|,
 $$
 
-其中 $L$ 为利普希茨常数.
- 2. (1)**一些利普希茨区域的例子:**所有光滑的区域是利普希茨区域;
- 非光滑区域的例子:在 $R^2$ 内的每一个多边形和 $R^3$ 内的每一个多面体都是利普希茨区域;在 $R^n$ 内每一个凸区域都是利普希茨区域(凸区域:区域上任意两点的连线都在区域内,则这样的区域就是凸区域).
-(2)**非利普希茨区域的例子:**两个多边形相交仅仅只有一个顶点,一个区域在边界上有一个交点.
- 3. **偏导数算子:**设 $\alpha=(\alpha_1,\alpha_2,\dots,\alpha_n)\in Z_{+}^{n}$ 是一个非负整数的向量,这里 $Z_{+}^{n}$ 是非负整数的集合.用 |\alpha|=\sum_{i=1}^{n}\alpha_i$ .对于一个连续函数 $v$ 和 $x=(x_1,x_2,\dots,x_n)\in R^n$ ,用
+其中 $$L$$ 为利普希茨常数.
+ 
+2.(1)**一些利普希茨区域的例子:**
+ 
+ 所有光滑的区域是利普希茨区域;
+ 非光滑区域的例子:在 $$R^2$$ 内的每一个多边形和 $$R^3$$ 内的每一个多面体都是利普希茨区域;在 $$R^n$$ 内每一个凸区域都是利普希茨区域(凸区域:区域上任意两点的连线都在区域内,则这样的区域就是凸区域).
 
-$$ 
-D^{\alpha}v=\frac{\partial^{|\alpha|}v}{\partial x_1^{\alpha_1}\dots x_n^{\alpha_n}},
+(2)**非利普希茨区域的例子:**
+
+两个多边形相交仅仅只有一个顶点,一个区域在边界上有一个交点.
+ 
+ 3.**偏导数算子:**
+ 
+ 设 $$\alpha=(\alpha_1,\alpha_2,\dots,\alpha_n)\in Z_{+}^{n}$$ 是一个非负整数的向量,这里 $$Z_{+}^{n}$$ 是非负整数的集合.
+ $$|\alpha|=\sum_{i=1}^{n}\alpha_i$$ .对于一个连续函数 $$v$$ 和 $$x=(x_1,x_2,\dots,x_n)\in R^n$$ ,用
 $$
 
+D^{\alpha}v=\frac{\partial^{|\alpha|}v}{\partial x_1^{\alpha_1}\dots x_n^{\alpha_n}},
+$$
 且
 
 $$
+
 x^{\alpha}=x_1^{\alpha_1}\dots x_n^{\alpha_n}.
 $$
- 4. **常用的几个banach空间**
-(1) $C(\overline\Omega)$ 是一个连续函数的空间,
+ 4.**常用的几个banach空间**
+
+(1) $$C(\overline\Omega)$$ 是一个连续函数的空间,
 
 $$
+
 ||v||_{C(\overline\Omega)}=max_{x\in\overline\Omega}|v(x)|
 $$
 
-(2) $C_{0}^{\infty}(\Omega)$ 是无限维导函数的空间,
+(2) $$C_{0}^{\infty}(\Omega)$$ 是无限维导函数的空间,
 
 $$
 supp(v)=closure~of \{x\in\Omega:v(x)\neq 0\}
 $$
 
-(3) $E(\Omega)$ 是表示 $u=v$ 几乎处处成立的局部勒贝格可积函数的空间.
-(4) $L^p=(v\in E(\Omega):\int_{E(\Omega)}|v|^p\mathrm{d}x<\infty)$ 是 $p$ 方可积函数空间,且范数定义为:
+(3) $$E(\Omega)$$ 是表示 $$u=v$$ 几乎处处成立的局部勒贝格可积函数的空间.
+
+(4) $$
+L^p=\{v\in E(\Omega):\int_{E(\Omega)}|v|^p\mathrm{d}x<\infty\}$$ 
+是 $$p$$ 方可积函数空间,且范数定义为:
 
 $$
 ||u||_{p,\Omega} =(\int_{\Omega}|u|^p\mathrm{d}x)^{\frac{1}{p}},1\leq p<\infty
@@ -57,16 +73,18 @@ $$
 $$
 
 本质上确界(ess sup)
-设 $f(x)$ 是 $E\in R^n$上的可测函数,$m(E)>0$.若存在 $M$ ,使得 $f(x)<M$ ,则称 $E$ 上本性有界,$M$ 称为 $f(x)$ 的本性上界。在对一切本性上界取下确界，记为 $||f||_{\infty}$ ,称它为 $f(x)$ 在 $E$ 上的本性上确界.此时用 $L^{\infty}(E)$ 表示在 $E$ 上的本性有界的函数. 
+设 $$f(x)$$ 是 $$E\in R^n$$ 上的可测函数,$$m(E)>0$$ .若存在 $$M$$ ,使得 $$f(x)<M$$ ,则称 $$E$$ 上本性有界,$$M$$ 称为 $$f(x)$$ 的本性上界。在对一切本性上界取下确界，记为 $$||f||_{\infty}$$ ,称它为 $$f(x)$$ 在 $$E$$ 上的本性上确界.此时用 $$L^{\infty}(E)$$ 表示在 $$E$$ 上的本性有界的函数. 
 (**本质上界与上界的区别:本质上界是最小的上确界,除了0测度集之外的函数.**)
- 5. **散度定理:
+ 
+ 5.**散度定理:
  $$
 \int_{\Omega}div\vec F\mathrm{d}x=\int_{\partial \Omega}\vec F\vec n\mathrm{d}s
 $$**
 
 例:用散度定理求一个多面体的体积.
+$$
 \begin{align}
-\int_{\Omega}1\mathrm{d}x
+&\int_{\Omega}1\mathrm{d}x\\
 &=\frac{1}{3}\int_{\Omega}div
 \begin{pmatrix}
 x  \\
@@ -104,52 +122,77 @@ z_1
 \end{pmatrix}\vec n_s
 \mathrm{d}s\\
 \end{align}
- 6.  **Banach空间:**完备的赋范线性空间.
+$$
+ 6.**Banach空间:** 完备的赋范线性空间.
+
 **赋范线性空间:**
-(1) $||x||\geq 0$且$||x||= 0\Leftrightarrow x=0$
-(2) $||x+y||\leq ||x||+||y||$
-(3) $||\alpha x||=\alpha||x||$
+
+(1) $$||x||\geq 0$$ 且 $$||x||= 0\Leftrightarrow x=0$$
+
+(2) $$||x+y||\leq ||x||+||y||$$
+
+(3) $$||\alpha x||=\alpha||x||$$
+ 
  **Hilbert空间:**完备的内积空间.(按内积诱导下的范数完备)
 完备:空间中的每个柯西点列都收敛.
-**内积空间:** $X$是复线性空间,对于 $X$ 中的任意两点 $x,y$ 都有一复数 $<x,y>$ 与之对应,且满足:
-(1) $<x,x>\geq0$,且$<x,x>=0\Leftrightarrow x=0$
-(2) $<\alpha x+\beta y,z>=\alpha<x,z>+\beta<y,z>$
-(3) $\overline{<x,y>}=<y,x>$
+
+**内积空间:** $$X$$ 是复线性空间,对于 $$X$$ 中的任意两点 $$x,y$$ 都有一复数 $$<x,y>$$ 与之对应,且满足:
+
+(1) $$<x,x>\geq0$$,且$$<x,x>=0\Leftrightarrow x=0$$
+
+(2) $$<\alpha x+\beta 
+y,z>=\alpha<x,z>+\beta<y,z>$$
+
+(3) $$\overline{<x,y>}=<y,x>$$
 
 
 ###1.2 sobolev空间的定义
-sobolev空间从分数阶和整数阶来定义的.在整数阶是用广义函数的它的弱导数的概念来定义的;分数阶是通过介绍 $p$ 方可积的差商来定义的.
+sobolev空间从分数阶和整数阶来定义的.在整数阶是用广义函数的它的弱导数的概念来定义的;分数阶是通过介绍 $$p$$ 方可积的差商来定义的.
 
  1.  **广义函数和弱导数**
-**广义函数:**显然 $C_{0}^{\infty}(\Omega)$ 是一个实向量空间,并由一个适当的拓扑转换成拓扑空间, $C_{0}^{\infty}(\Omega)$具有以下的拓扑,用 $D(\Omega)$ 来表示:一个函数序列 ${\phi_k}\subset C_{0}^{\infty}(\Omega)$ 被成为收敛于函数 $\phi\subset C_{0}^{\infty}(\Omega)$ ,如果满足以下两个条件:
-(1)存在一个紧集 $K\subset \Omega$ ,使得对于所有的 $k$ , $supp(\phi_k-\phi)\subset K$
-(2)对任意的 $\alpha\in Z_{+}^{n}$ ,都有
+
+**广义函数:**
+
+显然 $$C_{0}^{\infty}(\Omega)$$ 是一个实向量空间,并由一个适当的拓扑转换成拓扑空间, $$C_{0}^{\infty}(\Omega)$$具有以下的拓扑,用 $$D(\Omega)$$ 来表示:一个函数序列 $${\phi_k}\subset C_{0}^{\infty}(\Omega)$$ 被成为收敛于函数 $$\phi\subset C_{0}^{\infty}(\Omega)$$ ,如果满足以下两个条件:
+
+(1)存在一个紧集 $$K\subset \Omega$$ ,使得对于所有的 $$k$$ , $$supp(\phi_k-\phi)\subset K$$
+
+(2)对任意的 $$\alpha\in Z_{+}^{n}$$ ,都有
 $$
 \lim_{k\to \infty}||D^{\alpha}(\phi_k-\phi)||_{\infty}=0
 $$
 
-**弱导数:**如果$u$是一个连续函数,对任意的 $\alpha\in Z_{+}^{n}$ ,都有
+**弱导数:**
+
+$$u$$ 是一个连续函数,对任意的 $$\alpha\in Z_{+}^{n}$$ ,都有
 $$
 \int_{\Omega}D^{\alpha}u(x)\phi(x)\mathrm{d}x=(-1)^{|\alpha|}\int_{\Omega}u(x)D^{\alpha}\phi(x)\mathrm{d}x,
 $$
 
-对所有的 $\phi\in D(\Omega)$
-如果 $T\in D'(\Omega)$ ,对任意的 $\alpha\in Z_{+}^{n}$ ,定义弱导数 $D^{\alpha}T$,
+对所有的 $$\phi\in D(\Omega)$$
+如果 $$T\in D'(\Omega)$$ ,对任意的 $$\alpha\in Z_{+}^{n}$$ ,定义弱导数 $$D^{\alpha}T$$,
 $$
-<D^{\alpha}T,\phi>=(-1)^{|\alpha|}<T,D^{\alpha}\phi>,对所有的\phi\in D{\Omega}
+<D^{\alpha}T,\phi>=(-1)^{|\alpha|}<T,D^{\alpha}\phi>,对所有的 \phi\in D(\Omega)
 $$
 
- **紧集:** $X$ 是度量空间, $M$ 是 $X$ 的一个子集, $M$ 中的任何点列 ${x_n}$ 都存在子列收敛于 $M$ 中的一元素 $x_0$ .
-**关系:** 紧集一定是闭集,闭集不一定是紧集;紧集一定是完备集,完备集不一定是紧集;完备集一定是闭集,闭集不一定是完备集; $R^n$ 中有界闭集必为紧集;有限维空间中紧集和有界闭集等价.
-(1)闭集:集合 $A$ 中的每一个聚点都属于 $A$ .
-(2)紧集: $X$ 中的每个覆盖 $A$ 的开集族中必有有限个开集覆盖 $A$ .
-(3)完备集:若 $A=A'$ ,则 $A$ 为完备集.
- 2.**$\delta$ 函数:**
+ **紧集:** 
+ 
+ $$X$$ 是度量空间, $$M$$ 是 $$X$$ 的一个子集, $$M$$ 中的任何点列 $${x_n}$$ 都存在子列收敛于 $$M$$ 中的一元素 $$x_0$$ .
+
+**关系:** 紧集一定是闭集,闭集不一定是紧集;紧集一定是完备集,完备集不一定是紧集;完备集一定是闭集,闭集不一定是完备集; $$R^n$$ 中有界闭集必为紧集;有限维空间中紧集和有界闭集等价.
+
+(1)闭集:集合 $$A$$ 中的每一个聚点都属于 $$A$$ .
+
+(2)紧集: $$X$$ 中的每个覆盖 $$A$$ 的开集族中必有有限个开集覆盖 $$A$$ .
+
+(3)完备集:若 $$A=A'$$ ,则 $$A$$ 为完备集.
+
+ 2.**$$\delta$$ 函数:**
 $$
 \int_{\Omega}\delta(x)\phi(x)\mathrm{d}x=\phi(0)
 $$
 
-($\delta$ 函数不能看成是一个局部可积的函数)
+($$\delta$$ 函数不能看成是一个局部可积的函数)
 一般而言,弱导比经典导更弱,以至于可以把微分算子从函数微分扩大到更大的空间(分布空间).
 例:对于 Heaviside 分段函数
 $$
@@ -165,15 +208,18 @@ $$
 \int_{R}S'\phi\mathrm{d}x=-\int_{R}S\phi'\mathrm{d}x=\phi(0)
 $$
 
-因此在分布意义下 $S'=\delta$ .但是 $\delta \notin L_{loc}^{1}(\Omega)$ .
+因此在分布意义下 $$S'=\delta$$ .但是 $$\delta \notin L_{loc}^{1}(\Omega)$$ .
+
 **练习**
-证明 $\delta$ 函数不能由任何局部可积函数按式(1)给出
-证: 假设存在局部可积函数 $f(x)$ ，使得 
+
+证明 $$\delta$$ 函数不能由任何局部可积函数按式(1)给出
+
+证: 假设存在局部可积函数 $$f(x)$$ ，使得 
 $$
 \delta(\phi)=\phi(0)=\int_{R}f(x)\phi(x)\mathrm{d}x,\forall \phi \in D(R)
 $$
 
-特别的取函数$\phi(x)$ 为 
+特别的取函数$$\phi(x)$$ 为 
 $$
 \phi(x,a)=\begin{cases}
 e^{-\frac{a^2}{a^2-|x|^2}}, & |x|< a \\
@@ -181,7 +227,7 @@ e^{-\frac{a^2}{a^2-|x|^2}}, & |x|< a \\
 \end{cases}
 $$
 
-其中 $a>0$ 为常数.由此可知 $\phi(x,a)\in C_{c}^{\infty}(R)$.依上述假定可见 
+其中 $$a>0$$ 为常数.由此可知 $$\phi(x,a)\in C_{c}^{\infty}(R)$$.依上述假定可见 
 $$
 \int_{R}f(x)\phi(x,a)\mathrm{d}x=\phi(0,a)=e^{-1}
 $$
@@ -193,9 +239,11 @@ $$
 $$
 
 所以上面两式矛盾。
-故 $delta$ 函数不能由任何局部可积函数按式$<T_u,\phi>=\int_{R}u\phi\mathrm{d}x$ 给出，它是奇异的广义函数，而不是“普通(ordinary)”的广义函数。
+故 $$delta$$ 函数不能由任何局部可积函数按式$$<T_u,\phi>=\int_{R}u\phi\mathrm{d}x$$ 给出，它是奇异的广义函数，而不是“普通(ordinary)”的广义函数。
+
 3.**整数阶的sobolev空间**
-(1) $(k,p)$ 是sobolev空间的指数, $k$ 是非负整数, $p\geq 1$ ,定义
+
+(1) $$(k,p)$$ 是sobolev空间的指数, $$k$$ 是非负整数, $$p\geq 1$$ ,定义
 $$
 W^{k,p}(\Omega)=\{v\in L^p(\Omega):D^{\alpha}v\in  L^p(\Omega) for    ~all|\alpha|\leq k \}
 $$
@@ -205,7 +253,7 @@ $$
 ||v||_{k,p,\Omega}^{p}:=\sum_{|\alpha|\leq k}||D^{\alpha}v||_{0,p,\Omega}^{p}
 $$
 
-当 $p=2$ 时,习惯的写为 $H^{k}(\Omega)=W^{k,2}(\Omega)$,$H^{k}(\Omega)$ 是带有内积希尔伯特空间,
+当 $$p=2$$ 时,习惯的写为 $$^{k}(\Omega)=W^{k,2}(\Omega)$$,$$H^{k}(\Omega)$$ 是带有内积希尔伯特空间,
 $$
 (u,v)=\sum_{|\alpha|\leq k}(D^{\alpha}u,D^{\alpha}v),
 $$
@@ -220,25 +268,29 @@ $$
 W_{loc}^{k,p}(\Omega)=\{u\in E(\Omega):for~any~U\subset \subset\Omega, u\in W^{k,p}(U) \}
 $$
 
-且 $H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$
-对于 $L^{p}(\Omega)$ 上的一个函数,它的弱导总是存在的,但是它的弱导不在空间 $L^{p}(\Omega)$ 中,因此在 $W^{k,p}(\Omega)$ 中的元素有一定的光滑性.
+且 $$H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$$
+对于 $$L^{p}(\Omega)$$ 上的一个函数,它的弱导总是存在的,但是它的弱导不在空间 $$L^{p}(\Omega)$$ 中,因此在 $$W^{k,p}(\Omega)$$ 中的元素有一定的光滑性.
+ 
  4.$$
  W_{loc}^{k,p}(\Omega)=\{u\in E(\Omega):for~all~U\subset \subset\Omega, u\in W^{k,p}(U) \}
  $$
  
-且 $H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$
-其中 $U\subset \subset\Omega$ 也即 $\overline U \subset\Omega$
-当 $p=2 $ 时, $H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$
-当 $p\neq2$ 时, $W_{loc}^{k,2}(\Omega)$ 是Banach空间.
- 5.分数阶sobolev空间
- 古典导数的定义是通过逐点求差商的极限.对于sobolev空间的函数,我们用差商的p方可积描述它的可微性.
-(1)对于 $0<\theta<1$ , $1\leq p<\infty$ ,定义
+且 $$H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$$
+其中 $$\subset \subset\Omega$ 也即 $\overline U \subset\Omega$$
+当 $$p=2 $$ 时, $$H_{loc}^{k}(\Omega)=W_{loc}^{k,2}(\Omega)$$
+当 $$p\neq2$$ 时, $$W_{loc}^{k,2}(\Omega)$$ 是Banach空间.
+ 
+5.**分数阶sobolev空间**
+
+ 古典导数的定义是通过逐点求差商的极限.对于sobolev空间的函数,我们用差商的 $p$ 方可积描述它的可微性.
+
+(1)对于 $$0<\theta<1$$ , $$1\leq p<\infty$$ ,定义
 $$
 W^{\theta,p}(\Omega)=\{v\in L^p(\Omega):\int_{\Omega} \int_{\Omega}\frac{|v(x)-v(y)|^p}{|x-y|^{n+\theta p}}\mathrm{d}x\mathrm{d}y<\infty\}
 $$
 
-且 $H^{\theta}(\Omega)=W^{\theta,2}(\Omega)$
-在 $W^{\theta,p}(\Omega)$ 中,定义如下半范数和范数:
+且 $$H^{\theta}(\Omega)=W^{\theta,2}(\Omega)$$
+在 $$W^{\theta,p}(\Omega)$$ 中,定义如下半范数和范数:
 $$
 |v|_{\theta,p,\Omega}^p:=\int_{\Omega}\int_{\Omega}\frac{|v(x)-v(y)|^p}{|x-y|^{n+\theta p}}\mathrm{d}x\mathrm{d}y
 $$
@@ -260,19 +312,20 @@ $$
 \int_{\Omega}\int_{\Omega}\frac{|v(x)-v(y)|^p}{|x-y|^{n+\theta p}}\mathrm{d}x\mathrm{d}y<\infty
 $$
 
-利用坐标变换 $\overline x =x-y$ , $\overline y =x+y$ 得
+利用坐标变换 $$\overline x =x-y$$ , $$\overline y =x+y$$ 得
 $$ 
 \int_{0}^{1}\frac{1}{\overline x^{\theta p}}\mathrm{d}{\overline x}<\infty
 $$
 
-这里要求 $\theta<\frac{1}{p}$ .特别的,我们可以推出 $S\in H^{1/2-\varepsilon}(-1,1)$ ,对任意的 $\varepsilon \leq 1/2$ ,但是
-$S\notin H^{1/2-\varepsilon}(-1,1)$ .
-(2)给出 $s=k+\theta$,$\theta \in(0,1),k\geq0$ ,定义
+这里要求 $$\theta<\frac{1}{p}$$ .特别的,我们可以推出 $$S\in H^{1/2-\varepsilon}(-1,1)$$ ,对任意的 $$\varepsilon \leq 1/2$$ ,但是
+$$S\notin H^{1/2-\varepsilon}(-1,1)$$ .
+
+(2)给出 $$s=k+\theta$$,$$\theta \in(0,1),k\geq0$$ ,定义
 $$
 W^{s,p}(\Omega)=\{v\in W^{k,p}(\Omega):D^{\alpha}v\in  W^{\theta,p}(\Omega) ~|\alpha|\leq k \}
 $$
 
-在 $W^{s,p}(\Omega)$ 中,定义半范数和范数:
+在 $$W^{s,p}(\Omega)$$ 中,定义半范数和范数:
 $$
 |v|_{s,p,\Omega}^p:=(\sum_{|\alpha|=k}|D^{\alpha}v|_{\theta,p,\Omega}^p)^\frac{1}{p}
 $$
@@ -280,8 +333,10 @@ $$
 $$
 ||v||_{s,p,\Omega}^p:=(\sum_{|\alpha|\leq k}||D^{\alpha}v||_{\theta,p,\Omega}^p)^\frac{1}{p}
 $$
- 6. 负数阶sobolev空间
- 对于 $k\in N$ , $W^{-k,p}(\Omega)$ 被定义为对偶空间 $W_{0}^{k,p'}(\Omega)$ , $p'$ 是 $p$ 的共轭,即 $\frac{1}{p}+\frac{1}{p'}=1$ .特别的对于任意的 $f\in H^{-1}(\Omega)$ ,
+
+ 6.**负数阶sobolev空间**
+ 
+ 对于 $$k\in N$$ , $$W^{-k,p}(\Omega)$$ 被定义为对偶空间 $$W_{0}^{k,p'}(\Omega)$$ , $$p'$$ 是 $$p$$ 的共轭,即 $$\frac{1}{p}+\frac{1}{p'}=1$$ .特别的对于任意的 $$f\in H^{-1}(\Omega)$$ ,
 $$
 H^{-k}(\Omega)=( H_{0}^{-k}(\Omega))'
 $$
@@ -290,16 +345,17 @@ $$
 ||f||_{-1,\Omega}=sup_{v\in H_{0}^{1}(\Omega)}\frac{<f,v>}{||v||_{1,\Omega}}
 $$
 
-定理1.9:设 $v\in D'(\Omega)$,则 $v\in W^{k,p}(\Omega)$ 当且仅当 
+定理1.9:设 $$v\in D'(\Omega)$$,则 $$v\in W^{k,p}(\Omega)$$ 当且仅当 
 $$
 v=\sum_{|\alpha|\leq k}D^{\alpha}v_{\alpha},
 $$
 
-对任意的 $v_{\alpha}\in L^p(\Omega)$
-注意: $C_{0}^{\infty}(\Omega)$在$W^{k,p}(\Omega)$ 中不稠密,因此 $W^{k,p}(\Omega)$ 的对偶空间不能作为广义函数的子空间嵌入.
-7. 用傅里叶变换描述sobolev空间
- 给出 $v\in H^{k}(R^n)$ ,显然 $\widehat {D^{\alpha}v}=(i\xi)^{\alpha}\widehat v$ (根据傅里叶公式推出)
-$pf:$ 傅里叶变换公式:
+对任意的 $$v_{\alpha}\in L^p(\Omega)$$
+注意: $$C_{0}^{\infty}(\Omega)$$ 在 $$W^{k,p}(\Omega)$$ 中不稠密,因此 $$W^{k,p}(\Omega)$$ 的对偶空间不能作为广义函数的子空间嵌入.
+
+7.**用傅里叶变换描述sobolev空间**
+ 给出 $$v\in H^{k}(R^n)$$ ,显然 $$\widehat {D^{\alpha}v}=(i\xi)^{\alpha}\widehat v$$ (根据傅里叶公式推出)
+证明: 傅里叶变换公式:
 (1)
 $$
 \widehat {f(x)}=\int_{R^n}f(x)e^{-\xi ix}\mathrm{d}x
