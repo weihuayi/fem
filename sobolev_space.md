@@ -1,8 +1,5 @@
+#sobolev space
 
-
----
-
-##sobolev space
 ### 1.1预备知识: 
  
 
