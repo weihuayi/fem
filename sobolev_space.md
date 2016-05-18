@@ -49,7 +49,7 @@ $$
 ||v||_{C(\overline\Omega)}=max_{x\in\overline\Omega}|v(x)|
 $$
 
-(2) $$C_{0}^{\infty}(\Omega)$$ 是无限维导函数的空间,
+(2) $$C_{0}^{\infty}(\Omega)$$ 是无穷可微函数空间,
 
 $$
 supp(v)=closure~of \{x\in\Omega:v(x)\neq 0\}
