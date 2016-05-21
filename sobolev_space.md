@@ -644,10 +644,14 @@ $$
 $$
 
 得
-$$\widehat {D^{\alpha}v}=(i\xi)^{\alpha}\widehat v$$
+$$
+\widehat {D^{\alpha}v}=(i\xi)^{\alpha}\widehat v
+$$
 
 又
-$$\widehat{\bigtriangleup v}(\xi)=\widehat{v_{xx}}(\xi)+\widehat{v_{yy}}(\xi)\\
+
+$$
+\widehat{\bigtriangleup v}(\xi)=\widehat{v_{xx}}(\xi)+\widehat{v_{yy}}(\xi)\\
 =(i\xi)^{(2,0)}\widehat{v}(\xi)+(i\xi)^{(0,2)}\widehat{v}(\xi)\\
 =-\xi_1^2\widehat{v}(\xi)-\xi_2^2\widehat{v}(\xi)\\
 =-(\xi_1^2+\xi_2^2)\widehat{v}(\xi)\\
@@ -655,10 +659,16 @@ $$\widehat{\bigtriangleup v}(\xi)=\widehat{v_{xx}}(\xi)+\widehat{v_{yy}}(\xi)\\
 $$
 
 所以
-$$\widehat{v}(\xi)=-|\xi|^{-2}\widehat{\bigtriangleup v}(\xi)$$
+
+$$
+\widehat{v}(\xi)=-|\xi|^{-2}\widehat{\bigtriangleup v}(\xi)
+$$
 
 所以有
-$$\widehat{D^{\alpha}v}(\xi)=(i\xi)^{\alpha}\widehat v(\xi)=-(i\xi)^{\alpha}|\xi|^{-2}\widehat{\bigtriangleup v}(\xi)$$
+$$
+\widehat{D^{\alpha}v}(\xi)=(i\xi)^{\alpha}\widehat v(\xi)=-(i\xi)^{\alpha}|\xi|^{-2}\widehat{\bigtriangleup v}(\xi)
+$$
+
  **问题一:变换过程:** 例:已知函数,
 
 $$
@@ -682,7 +692,9 @@ $$
 
 这里要求 $$\theta<\frac{1}{p}$$ .特别的,我们可以推出 $$S\in H^{1/2-\varepsilon}(-1,1)$$ ,对任意的 $$\varepsilon \leq 1/2$$ ,但是
 $$S\notin H^{1/2-\varepsilon}(-1,1)$$ .
+
 **问题二:证明定理1.9**
+
 定理1.9:设 $$v\in D'(\Omega)$$,则 $$v\in W^{k,p}(\Omega)$$ 当且仅当 
 
 $$
@@ -691,8 +703,16 @@ $$
 
 对任意的 $$v_{\alpha}\in L^p(\Omega)$$
 注意: $$C_{0}^{\infty}(\Omega)$$在$$W^{k,p}(\Omega)$$ 中不稠密,因此 $$W^{k,p}(\Omega)$$ 的对偶空间不能作为广义函数的子空间嵌入.
+
 **问题三:例1.11的证明** 
+
 在 $$R^n$$ 中, $$\delta$$ 函数的傅里叶变换是1,在极坐标下,可以看出 $$\delta\in H^{-s}$$ 仅仅对于 $$s>2/n$$ .因此当 $$n\geq2$$ 时, $$\delta\notin H^{-1}$$
+
 **问题四:证明** 
+
 $$W^{n,1}(\Omega)$$ 可以嵌入到 $$L^{\infty}(\Omega)$$, 但是 $$W^{1,n}(\Omega)$$ 不能嵌入到 $$L^{\infty}(\Omega)$$
-**问题五:证明$$||\widehat{D^{\alpha}v}||_{0,R^n}\leq ||\widehat {\bigtriangleup v}||_{0,R^n}$$**
+
+**问题五:证明**
+$$
+||\widehat{D^{\alpha}v}||_{0,R^n}\leq ||\widehat {\bigtriangleup v}||_{0,R^n}
+$$
